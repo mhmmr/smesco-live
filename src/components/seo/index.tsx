@@ -119,6 +119,7 @@ const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date,
     >
       <title>{metaTitle}</title>
       {isArticle && <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>}
+      <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=smesco"></script>
     </Helmet>
   )
 }

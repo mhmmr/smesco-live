@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+:root {
+  --liveVideoHeight: 520px;
+}
+
 @layer base {
   @import url('https://rsms.me/inter/inter.css');
   html {
@@ -12,4 +16,19 @@
   @supports (font-variation-settings: normal) {
     html { font-family: 'Inter var', sans-serif; }
   }
+
+  button[type="button"]:focus, [role]:focus {
+    outline: none;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-screen-lg;
+  }
+  /* .gatsby-image-wrapper {
+    [data-placeholder-image] {
+      background-color: transparent !important;
+    }
+  } */
 }

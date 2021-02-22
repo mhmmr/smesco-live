@@ -3,22 +3,23 @@ require("dotenv").config({
 });
 
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Boilerplate`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@mhmmr`,
-    siteUrl: "https://github.com/mhmmr",
-    image: "https://res.cloudinary.com/muhrusdi/image/upload/v1604903512/template-awwwara.jpg"
-  },
   flags: {
-    PRESERVE_WEBPACK_CACHE: false,
-    FAST_DEV: true,
+    PRESERVE_WEBPACK_CACHE: true,
+    FAST_DEV: false,
     FAST_REFRESH: true,
     DEV_SSR: false,
+  },
+  siteMetadata: {
+    title: `Smesco Live`,
+    description: `Live Shopping - Product Herbal & Spa Lokal Unggulan Smesco`,
+    author: `@mhmmr`,
+    siteUrl: "https://github.com/mhmmr",
+    image: "src/images/cover.jpg"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,12 +38,27 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/smesco-icon.png`, // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-postcss",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: '@prismicio/gatsby-source-prismic-graphql',
+      options: {
+        repositoryName: "smesco", // required
+        defaultLang: 'en-us', // optional, but recommended
+        prismiCRef: "YDFPiBIAAHbPgGFS",
+        accessToken: "MC5ZREZXeUJJQUFDRUFnSUZi.77-9HzM-Qy3vv70QI0bvv73vv73vv70ILE3vv70ERAxmRyhT77-977-9HH4-77-9DT8", // optional
+        path: '/preview', // optional, default: /preview
+        previews: true, // optional, default: false
+        sharpKeys: [
+          /image|photo|picture/, // (default)
+          'profilepic',
+        ],
+      }
+    }
   ],
 }
