@@ -16,7 +16,7 @@ const ProductItem = ({data}) => {
     <ProductItemStyled style={{height: 189}} className="product-item">
       <Dialog.Root>
         <Dialog.Trigger className="w-full">
-          <div className="product-item-inner text-white relative rounded-xl overflow-hidden">
+          <div className="product-item-inner text-white relative rounded-xl overflow-hidden focus:outline-none">
             <div className="w-full transition-all duration-1000 object-cover h-full absolute">
               <img className="w-full transition-all duration-1000 object-cover h-full absolute" src={data.featured_image.url} alt=""/>
             </div>
@@ -36,7 +36,7 @@ const ProductItem = ({data}) => {
               initial="hidden"
               animate="visible"
               variants={variants}
-              className="rounded-xl overflow-hidden"
+              className="rounded-xl overflow-hidden dialog-content"  style={{maxHeight: "calc(100vh - 100px)"}}
             >
               <div className="relative" style={{height: 200}}>
                 <img className="w-full transition-all duration-1000 object-cover absolute h-full" src={data.featured_image.url} alt=""/>

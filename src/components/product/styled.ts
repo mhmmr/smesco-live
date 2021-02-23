@@ -49,6 +49,11 @@ export const DialogContentStyled = styled(Dialog.Content)({
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
+  "@media (max-width: 639px)": {
+    ".dialog-content": {
+      overflowY: "scroll"
+    }
+  },
 })
 
 export const StyledContent = styled(motion.div)({

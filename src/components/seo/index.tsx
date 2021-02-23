@@ -96,6 +96,10 @@ const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date,
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
           name: `twitter:card`,
           content: `summary_large_image`,
         },

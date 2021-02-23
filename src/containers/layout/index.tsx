@@ -32,17 +32,17 @@ export const NavContent: React.FC<NavContentPropType> = ({height, links}) => {
       </div>
       <div>
         <ul className="flex -mx-2">
-          <li className="px-2">
+          <li className="px-2 text-blue-600">
             <a href={PLink.url(networks[0].url)}>
               <FaFacebook/>
             </a>
           </li>
-          <li className="px-2">
+          <li className="px-2 text-red-500">
             <a href={PLink.url(networks[1].url)}>
               <FaYoutube/>
             </a>
           </li>
-          <li className="px-2">
+          <li className="px-2 text-pink-600">
             <a href={PLink.url(networks[2].url)}>
               <FaInstagram/>
             </a>

@@ -106,8 +106,8 @@ const Home = () => {
                 <StaticImage src="../../images/byanakbangsa.png" placeholder="blurred" alt=""/>
               </li>
             </ul>
-           <Link to="/live">
-              <div className="live-video rounded-xl shadow overflow-hidden relative flex justify-center items-center">
+           <Link to="/live" className="rounded-xl focus:outline-none shadow block overflow-hidden relative">
+              <div className="live-video relative flex justify-center items-center">
                 <StaticImage className="w-full transition-all duration-1000 object-cover h-full absolute" placeholder="blurred" src="../../images/livebg.png" alt=""/>
                 <div className="absolute play transition-all duration-1000" style={{zIndex: 1}}>
                   <FaPlay size={100} color="#fff"/>

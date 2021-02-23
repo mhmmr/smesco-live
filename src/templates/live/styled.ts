@@ -7,11 +7,6 @@ export const Iframe = styled.iframe`
 `
 
 export const LiveStyled = styled.div`
-  .nav-live {
-    svg {
-      fill: white !important;
-    }
-  }
   .banner {
     height: 300px;
     @media (min-width: 640px) {

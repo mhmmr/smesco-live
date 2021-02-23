@@ -64,14 +64,14 @@ const Live = () => {
     }
   })
   return (
-    <LiveStyled className="bg-gray-900">
+    <LiveStyled>
       <div className="nav-live">
         <div className="container max-w-full">
           <NavContent height={60} links={prismic && prismic.allSocial_medias.edges[0]}/>
         </div>
       </div>
-      <div className="sticky top-0 z-50">
-        <div className="bg-black" style={{height: 520}}>
+      <div className="z-50">
+        <div style={{height: 520}}>
           <Iframe
             src="https://www.youtube.com/embed/live_stream?channel=UC8tLzrxYWJb000rAJdwKncw"
             className="w-full h-full"
